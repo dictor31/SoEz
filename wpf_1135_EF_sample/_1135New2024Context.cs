@@ -28,7 +28,7 @@ public partial class _1135New2024Context : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     { 
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        optionsBuilder.UseMySql("server=192.168.200.13;userid=student;password=student;database=1135_new_2024", Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.3.39-mariadb"));
+        optionsBuilder.UseMySql("server=;userid=student;password=student;database=1135_new_2024", Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.3.39-mariadb"));
         optionsBuilder.LogTo(s=> File.AppendAllText("log.txt", s));
     }
 

@@ -11,6 +11,10 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition />
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Menu>
             <MenuItem Header="Исполнитель">
                 <MenuItem Header="Добавить" Click="OpenNewSingerEditor"/>
@@ -22,14 +26,14 @@
                 <GridView>
                     <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding Firstname}"/>
                     <GridViewColumn Header="Фамилия" DisplayMemberBinding="{Binding Lastname}"/>
-                    <GridViewColumn>
+                    <GridViewColumn Header="Музыка">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <ItemsControl DisplayMemberPath="Title" ItemsSource="{Binding Musics}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn>
+                    <GridViewColumn Header="Пресса">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <ItemsControl DisplayMemberPath="TitleArticle" ItemsSource="{Binding YellowPresses}"/>
@@ -39,8 +43,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-		<Button Click="Click_win">
-			
-		</Button>
+        <Button Click="Click_win" Grid.Column="1" Grid.Row="1" Margin="0 0 0 300" Width="200" Height="30" Content="Открыть окно прессы" FontSize="16"/>
+        <Button Click="Click_addPress" Grid.Column="1" Grid.Row="1" Margin="0 0 0 200" Width="200" Height="30" Content="Добавить новую статью" FontSize="16"/>
     </Grid>
 </Window>

@@ -82,8 +82,22 @@ namespace wpf_1135_EF_sample
 
         private void Click_win(object sender, RoutedEventArgs e)
         {
-            Pressa pressa = new Pressa();
-            pressa.Show();
+            PressWindow pressWindow = new();
+            pressWindow.Show();
+        }
+
+        private void Click_addPress(object sender, RoutedEventArgs e)
+        {
+            if (SelectedSinger == null)
+            {
+                MessageBox.Show("Ошибка", "Выберите певца, про которого хотите писать", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                AddPressWindow addPressWindow = new AddPressWindow(SelectedSinger);
+                addPressWindow.ShowDialog();
+            }
+
         }
     }
 }
