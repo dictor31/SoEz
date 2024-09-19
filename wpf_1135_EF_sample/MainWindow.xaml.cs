@@ -79,6 +79,12 @@ namespace wpf_1135_EF_sample
             new WinSingerEditor(SelectedSinger).ShowDialog();
             UpdateList();
         }
+
+        private void Click_win(object sender, RoutedEventArgs e)
+        {
+            Pressa pressa = new Pressa();
+            pressa.Show();
+        }
     }
 }
 

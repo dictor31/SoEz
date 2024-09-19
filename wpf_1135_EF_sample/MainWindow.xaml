@@ -39,5 +39,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
+		<Button Click="Click_win">
+			
+		</Button>
     </Grid>
 </Window>
