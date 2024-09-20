@@ -16,6 +16,6 @@
         <Label Content="Статья"/>
         <TextBox Text="{Binding YellowPress.Description}"/>
 
-        <Button Content="Test" Click="Test"/>
+        <Button Content="Добавить статью" Click="Click_add"/>
     </StackPanel>
 </Window>

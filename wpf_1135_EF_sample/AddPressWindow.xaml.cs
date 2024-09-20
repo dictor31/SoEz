@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace wpf_1135_EF_sample
 {
-    /// <summary>
-    /// Логика взаимодействия для AddPressWindow.xaml
-    /// </summary>
     public partial class AddPressWindow : Window
     {
         public Singer Singer { get; set; }
@@ -30,7 +27,7 @@ namespace wpf_1135_EF_sample
             DataContext = this;
         }
 
-        private void Test(object sender, RoutedEventArgs e)
+        private void Click_add(object sender, RoutedEventArgs e)
         {
             YellowPress.IdSinger = Singer.Id;
             using (var db = new _1135New2024Context())

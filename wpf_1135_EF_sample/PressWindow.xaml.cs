@@ -52,7 +52,7 @@ namespace wpf_1135_EF_sample
 
         private void Click_del(object sender, RoutedEventArgs e)
         {
-            if (SelectedPress == null || MessageBox.Show("Lol", "Are you sure?", MessageBoxButton.YesNo) == MessageBoxResult.No)
+            if (SelectedPress == null || MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo) == MessageBoxResult.No)
                 return;
 
             using (var db = new _1135New2024Context())
